@@ -4,6 +4,13 @@ from docx.shared import Inches
 from docx.shared import Cm
 from docx.oxml.ns import qn
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+import requests
+
+'''
+html = requests.get('jpg')
+with open('picture.jpg', 'wb') as file:
+    file.write(html.content)
+'''
 
 document = Document()
 # document.add_heading('xxx', 0)
