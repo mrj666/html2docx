@@ -4,7 +4,7 @@ import xlrd
 
 case_data = 'auto_test_list'
 
-table = xlrd.open_workbook(case_data) #read excel value
+table = xlrd.open_workbook(case_data)  # read excel value
 sutable = table.sheet_by_name('SU')
 
 mcs_list = [0, 1, 9]
@@ -26,3 +26,10 @@ for mcs in mcs_list:
                     tmp_mcs = sutable.cell_value(table_lines, mcs_col)
                     if str(mcs) == tmp_mcs:
                         tmp_dcm = sutable.cell_value(table_lines, dcm_col)
+                        if str(dcm) == tmp_dcm:
+                            tmp_he = sutable.cell_value(table_lines, he_col)
+                            if str(he) == tmp_he:
+                                tmp_gi = sutable.cell_value(table_lines, gi_col)
+                                if str(gi) == tmp_gi:
+                                    print(str(mcs) + str(dcm) + str(he) + str(gi) + '\tin line: ' + table_lines)
+                                    continue
