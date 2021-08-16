@@ -32,4 +32,5 @@ for mcs in mcs_list:
                                 tmp_gi = sutable.cell_value(table_lines, gi_col)
                                 if str(gi) == tmp_gi:
                                     print(str(mcs) + str(dcm) + str(he) + str(gi) + '\tin line: ' + table_lines)
-                                    continue
+                                    break
+                                    
